@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Sprites 演示样式 */
+.sprite {
+  background-image: url("/placeholder.svg?height=96&width=96&text=Sprite");
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.sprite-facebook {
+  background-position: 0 0;
+}
+
+.sprite-twitter {
+  background-position: -24px 0;
+}
+
+.sprite-instagram {
+  background-position: -48px 0;
+}
+
+.sprite-linkedin {
+  background-position: -72px 0;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram,
+.icon-linkedin {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ddd;
+}
