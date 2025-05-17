@@ -1,0 +1,124 @@
+.captcha-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.captcha-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.captcha-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--gray-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.captcha-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.captcha-content {
+  padding: 24px;
+}
+
+.captcha-content p {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.captcha-error {
+  margin-bottom: 16px;
+  color: var(--error-color);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.slider-container {
+  position: relative;
+  height: 60px;
+  user-select: none;
+  touch-action: none;
+}
+
+.slider-track {
+  position: relative;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--gray-light);
+  border: 1px solid var(--gray-medium);
+}
+
+.slider-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background-color: var(--success-color);
+  opacity: 0.3;
+  transition: width 0.1s ease;
+}
+
+.slider-thumb {
+  position: absolute;
+  top: 0;
+  width: 54px;
+  height: 38px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  font-size: 18px;
+  transition: left 0.1s ease;
+}
+
+.slider-thumb.dragging {
+  cursor: grabbing;
+}
+
+.slider-thumb.verified {
+  background-color: var(--success-color);
+}
+
+.slider-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 14px;
+  pointer-events: none;
+}
