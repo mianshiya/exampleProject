@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+
+@layer components {
+  .markdown-preview {
+    @apply prose prose-h1:border-b prose-h1:pb-2 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-md prose-img:mx-auto prose-pre:bg-gray-50;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0.6;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

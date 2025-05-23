@@ -1,0 +1,81 @@
+.flash-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.flash-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.flash-button:active {
+  transform: scale(0.98);
+}
+
+.flash-button.disabled {
+  background-color: var(--gray-dark);
+  cursor: not-allowed;
+}
+
+.flash-button.loading {
+  background-color: var(--primary-light);
+  cursor: wait;
+}
+
+.flash-button.success {
+  background-color: var(--success-color);
+}
+
+.flash-button.error {
+  background-color: var(--error-color);
+}
+
+.flash-button.animating {
+  animation: button-press 0.3s ease;
+}
+
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+}
