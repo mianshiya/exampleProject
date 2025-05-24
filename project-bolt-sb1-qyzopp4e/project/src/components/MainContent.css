@@ -1,0 +1,24 @@
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.responsive-layout {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* 桌面端三栏布局 */
+@media (min-width: 769px) {
+  .responsive-layout {
+    flex-direction: row;
+  }
+}
+
+/* 移动端单栏布局 */
+@media (max-width: 768px) {
+  .responsive-layout {
+    flex-direction: column;
+  }
+}

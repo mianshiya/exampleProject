@@ -1,0 +1,50 @@
+.content {
+  flex: 2;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.code-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #1e40af;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.code-box h3 {
+  margin-top: 0;
+  color: #1e40af;
+}
+
+.code-box ul, .code-box ol {
+  padding-left: 1.5rem;
+}
+
+.code-box li {
+  margin-bottom: 0.5rem;
+}
+
+.code-box pre {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* 移动端样式调整 */
+@media (max-width: 768px) {
+  .content {
+    order: -1; /* 确保内容在移动端显示在最上方 */
+  }
+}

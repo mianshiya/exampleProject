@@ -1,0 +1,30 @@
+.layout-indicator {
+  background-color: #f0fdf4;
+  border-bottom: 1px solid #d1fae5;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.indicator-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.current-width span,
+.layout-type span,
+.breakpoint-info span {
+  font-weight: 600;
+  color: #047857;
+}
+
+@media (max-width: 768px) {
+  .indicator-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
